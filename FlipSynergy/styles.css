@@ -1,0 +1,141 @@
+/* Color scheme */
+:root {
+  --primary-color: #FFF8D6;
+  --secondary-color: #F7E1AE;
+  --tertiary-color: #A4D0A4;
+  --quaternary-color: #617A55;
+  --highlight-color: #FF6D60;
+}
+
+/* Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--quaternary-color);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--quaternary-color);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: var(--secondary-color);
+}
+
+.hero-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--quaternary-color);
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: var(--highlight-color);
+}
+
+.hero-image {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--quaternary-color);
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    z-index: 1000;
+  }
+
+  .nav-menu.show li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-image {
+    margin: 0;
+  }
+}
