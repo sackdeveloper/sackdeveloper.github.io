@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Silly Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flip Synergy - Homepage</title>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <h1>Welcome to the Silly Website!</h1>
-    <p>Are you ready for some silliness?</p>
-    <div>
-        <img src="https://media.giphy.com/media/1MTLxzwvOnvmE/giphy.gif" alt="Silly Gif">
-        <p>Ha ha ha!</p>
-    </div>
-    <div>
-        <h2>Let's Play a Game!</h2>
-        <p>Guess the number I'm thinking of (between 1 and 10):</p>
-        <form>
-            <input type="number" id="guess" name="guess" min="1" max="10" required>
-            <button type="submit">Submit</button>
-        </form>
-        <p id="result"></p>
-    </div>
-    <script>
-        // Generate random number between 1 and 10
-        const randomNumber = Math.floor(Math.random() * 10) + 1;
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img
+                src="https://github.com/sackdeveloper/sackdeveloper.github.io/blob/main/FlipSynergy/assets/FlipSynergy%20Logo.png?raw=true"
+                alt="Flip Synergy Logo"></a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
 
-        // Get form element and result element
-        const form = document.querySelector('form');
-        const result = document.querySelector('#result');
+<!-- Main content -->
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Flip Synergy</h1>
+            <h2>Leveraging the power of AI marketing software for real estate investors</h2>
+        </div>
+    <div class="hero-image">
+        <img src="https://github.com/sackdeveloper/sackdeveloper.github.io/blob/main/FlipSynergy/assets/hero-img.png?raw=true"
+            alt="Hero Image">
+    </div>
+    </section>
+    </main>
 
-        // Handle form submission
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const guess = parseInt(document.querySelector('#guess').value);
-            if (guess === randomNumber) {
-                result.textContent = "You guessed it! You're a genius!";
-            } else {
-                result.textContent = "Sorry, that's not it. Try again!";
-            }
-            form.reset();
-        });
-    </script>
+<!-- Footer -->
+<footer>
+    <p>Email: msack222@gmail.com | Phone: 443-834-3282</p>
+    <!-- Add social media links here -->
+</footer>
+
+<script src="js/main.js"></script>
 </body>
-
 </html>
