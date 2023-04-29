@@ -12,6 +12,22 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+    color: var(--quaternary-color);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 1rem;
+  }
+  
+  a {
+    color: var(--highlight-color);
+    text-decoration: none;
 }
 
 /* Navigation */
@@ -21,11 +37,12 @@ body {
   align-items: center;
   padding: 10px 20px;
   background-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
+.nav-logo img {
+  height: 40px;
+  width: auto;
 }
 
 .nav-menu {
@@ -42,6 +59,7 @@ body {
 .nav-menu a {
   text-decoration: none;
   color: var(--quaternary-color);
+  font-weight: 500;
 }
 
 .nav-toggle {
@@ -67,22 +85,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 20px;
+  padding: 100px 20px;
   background-color: var(--secondary-color);
+  background-image: linear-gradient(120deg, var(--tertiary-color) 0%, var(--secondary-color) 100%);
 }
 
 .hero-text {
   flex: 1;
   margin-right: 20px;
+  max-width: 600px;
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--quaternary-color);
+  margin-bottom: 0.5rem;
 }
 
 .hero h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--highlight-color);
 }
 
@@ -94,6 +115,8 @@ body {
 .hero img {
   width: 100%;
   height: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 /* Footer */
@@ -101,11 +124,13 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: var(--primary-color);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   color: var(--quaternary-color);
 }
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
+  .nav
   .nav-menu {
     display: none;
   }
@@ -132,10 +157,26 @@ footer {
 
   .hero {
     flex-direction: column;
+    padding: 50px 20px;
   }
 
-  .hero-text,
+    .hero-text,
+    .hero-image {
+      margin: 0;
+    }
+  
+    .hero-text {
+      text-align: center;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
   .hero-image {
-    margin: 0;
+    margin-top: 30px;
   }
 }
