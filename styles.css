@@ -223,3 +223,7 @@ footer {
 .hero-image img {
   animation: float 3s ease-in-out infinite;
 }
+
+.card:hover {
+  animation: float 3s ease-in-out 2;
+}
